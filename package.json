@@ -1,0 +1,22 @@
+{
+  "name": "poc-electron-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "copy-front": "copyfiles -u 2 front/dist/**/* public",
+    "build": "electron-builder build --windows"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3"
+  }
+}
