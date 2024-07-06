@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
+  "keywords": [
+    "electron",
+    "node",
+    "express",
+    "react",
+    "vite"
+  ],
+  "author": "Hudson O Ginelli",
+  "license": "MIT",
   "scripts": {
     "start": "electron .",
     "copy-front": "copyfiles -u 2 front/dist/**/* public",
-    "build": "electron-builder build --windows"
+    "build-front": "cd front && yarn build && cd .. && yarn copy-front",
+    "build": "yarn build-front && electron-builder build --windows"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "copyfiles": "^2.4.1",
     "express": "^4.19.2"
